@@ -29,8 +29,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
 
+author: PEG
+copyright: "PEG, IITDharwad"
+title-logo: /images/title-logo.svg
 # Build settings
+#removed minima
 theme: minima
+
 plugins:
   - jekyll-feed
 # Exclude from processing.
