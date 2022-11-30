@@ -7,7 +7,7 @@ layout: default
   <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%} {{ content }} {%- if site.posts.size > 0 -%}
   <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
-  <ul class="post-list">
+  <!-- <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
@@ -21,9 +21,27 @@ layout: default
       {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
     </li>
     {%- endfor -%}
-  </ul>
-
+  </ul> -->
+  {%- if site.title-logo -%}
+  <img src="{{ site.back-logo | relative_url}}" alt="{{site.title | escape}}" style="margin-bottom: 20px ;"></img>
+  {%- else -%}
+    {{site.title | escape}}
+    {%- endif -%}
+    <br/>
+  <p>
+    <b>The Power and Energy Group (PEG)</b> at IIT-Dharwad is the amalgamation
+    of expertise in multiple areas, including power electronics, power systems,
+    protection, magnetics, design and fabrication of electronic systems, and
+    industrial design. The group is currently executing funded research projects
+    from Industry and scientific bodies such as DST and SERB in areas including
+    DC Circuit breakers, Effects of renewable generation on Power System
+    Dynamics and protection, and Electric vehicles. For more information, please
+    see the
+    <a href="https://gitea.iitdh.ac.in/PEG/PEG-Wiki/wiki">Lab Wiki here </a>and
+    watch our latest updates.
+  </p>
   <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
-  <img class="feature-img" src="{{ 'background.jpg' | relative_url }}" />
+  <!-- <img class="feature-img" src="{{ 'background.jpg' | relative_url }}" /> -->
+ 
 </div>
